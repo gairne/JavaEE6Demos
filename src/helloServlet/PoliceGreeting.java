@@ -1,3 +1,6 @@
+package helloServlet;
+
+import helloServlet.Greeting;
 
 public class PoliceGreeting implements Greeting {
 
