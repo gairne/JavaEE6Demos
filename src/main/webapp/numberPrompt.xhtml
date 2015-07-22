@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	<head>
+	</head>
+	<h:body>
+		<h:form>
+			<p>
+			<h:inputText
+                    id="userNo"
+                    title="Enter 0, 2, 4, 6, or 8:"
+                    value="#{numberEntryBean.userNumber}">
+                <f:validator validatorId="numberValidator" />
+                    <f:validateLongRange
+                        minimum="#{numberEntryBean.minimum}"
+                        maximum="#{numberEntryBean.maximum}"/>
+                </h:inputText>
+            
+                <h:commandButton type="submit" value="Submit"
+                                 action="#{numberEntryBean.save}"/>
+            </p>
+		</h:form>
+	</h:body>
+</html>
